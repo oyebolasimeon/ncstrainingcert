@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SIGPWR } from 'constants';
+import { Component, OnInit } from '@angular/core'
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
