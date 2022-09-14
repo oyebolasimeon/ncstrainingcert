@@ -1,0 +1,49 @@
+<section id="home">
+    <div class="container">
+        
+           <app-preloader *ngIf="loading"></app-preloader>
+           <section *ngIf="!loading">
+
+            <div class="img">
+                <img src="./assets/bg-1.jpg" alt="" srcset="">
+               </div>
+
+
+               <div class="form-part" *ngIf="forms">
+                <h3>Proceed to generate your certificate </h3>
+                <form >
+                  <fieldset>
+                    <legend>enter registered email</legend>
+                    <input type="text"
+                    id="useremail"
+                    required>
+                  </fieldset>
+    
+    
+                  <button (click)="userCredVal()" >LOGIN</button>
+                
+                </form>
+               </div>
+
+               <div class="form-part" *ngIf="!forms">
+                <h3>enter your full name as you want it on certificate</h3>
+                <form >
+                  <fieldset>
+                    <legend>enter fullname</legend>
+                    <input type="text"
+                    id="email"
+                    formControlName="useremail"
+                    name="useremail"
+                    >
+                  </fieldset>
+    
+    
+                  <button>LOGIN</button>
+                
+                </form>
+               </div>
+           </section>
+           
+
+    </div>
+</section>

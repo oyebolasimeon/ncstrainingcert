@@ -1,0 +1,23 @@
+.image{
+    /* flex: 1; */
+    width: 50%;
+    min-height: 98vh;
+    margin: auto;
+    transform-origin: bottom;
+    
+}
+
+.image img{
+    margin-top: 20vh;
+    animation-name: simeon-bounce-anim;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes simeon-bounce-anim {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
