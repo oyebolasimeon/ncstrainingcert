@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -12,7 +13,7 @@ export class LandingPageComponent implements OnInit {
   forms: boolean = true;
   searchFind: any;
 
-  constructor(private notification: ToastrService) { }
+  constructor(private notification: ToastrService, private route: Router) { }
 
   ngOnInit(): void {
     this.onLoad()
@@ -43,7 +44,17 @@ export class LandingPageComponent implements OnInit {
     }
     return this.forms;
   }
-    
 
+
+  getStudentValidName(){
+    const studentName = (<HTMLInputElement>document.getElementById("stuName"))
+    if(studentName.value != ""){
+      this.notification.info("CONGRATULATIONS ON COMPLETING THE TRAINING MODULE")
+      this.route.navigate(['/my-certificate'])
+    } else {
+      this.notification.warning("NAME CANNOT BE EMPTY")
+    }
+  }
 }
+
 

@@ -11,7 +11,7 @@
 
                <div class="form-part" *ngIf="forms">
                 <h3>Proceed to generate your certificate </h3>
-                <form >
+                <div class="form-class" >
                   <fieldset>
                     <legend>enter registered email</legend>
                     <input type="text"
@@ -20,27 +20,27 @@
                   </fieldset>
     
     
-                  <button (click)="userCredVal()" >LOGIN</button>
+                  <button (click)="userCredVal()" >PROCeed</button>
                 
-                </form>
+                </div>
                </div>
 
                <div class="form-part" *ngIf="!forms">
                 <h3>enter your full name as you want it on certificate</h3>
-                <form >
+                <div class="form-class" >
                   <fieldset>
                     <legend>enter fullname</legend>
                     <input type="text"
-                    id="email"
-                    formControlName="useremail"
-                    name="useremail"
+                    id="stuName"
+                    formControlName="stuName"
+                    name="stuName"
                     >
                   </fieldset>
     
     
-                  <button>LOGIN</button>
+                  <button (click)="getStudentValidName()">Access Certificate</button>
                 
-                </form>
+                </div>
                </div>
            </section>
            
